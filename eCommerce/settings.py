@@ -152,7 +152,8 @@ DEFAULT_AUTO_FIELD='django.db.models.AutoField'
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR /'static'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATICFILES_DIRS = [
     'eCommerce/static',
 
@@ -174,5 +175,5 @@ EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = config('EMAIL_USE_TLS',cast=bool)
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 django_heroku.settings(locals())
