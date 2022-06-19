@@ -9,6 +9,8 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
+from distutils.debug import DEBUG
+from pickle import TRUE
 import django_heroku
 import os
 from pathlib import Path
@@ -24,12 +26,12 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = 'e#985nmx8lzji!xy-9v99oizxy^_!f*&@jr72fs@f0)ilo^q('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=True, cast=bool)
-
-ALLOWED_HOSTS = []
+#DEBUG = config('DEBUG', default=True, cast=bool)
+DEBUG = True
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
