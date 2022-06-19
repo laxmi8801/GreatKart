@@ -1,5 +1,4 @@
-from distutils.command.upload import upload
-from re import U
+
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser,BaseUserManager
 

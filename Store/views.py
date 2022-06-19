@@ -1,9 +1,7 @@
 from email import message
-from itertools import product
-from socket import fromshare
+
 from urllib.request import Request
 from django.core import paginator
-from django.db.models.query_utils import Q
 from django.shortcuts import get_object_or_404, render,redirect
 from django.contrib import messages
 from Store.forms import ReviewForm
@@ -12,7 +10,6 @@ from category.models import Category
 from cartes.models import CartItem
 from cartes.views import _cart_id
 from django.core.paginator import EmptyPage,PageNotAnInteger,Paginator
-from django.db.models import Q
 from orders.models import OrderProduct
 # Create your views here.
 
