@@ -1,8 +1,4 @@
 
-from itertools import product
-from operator import mod
-from tkinter import CASCADE
-from turtle import update
 from django.db import models
 from category.models import Category
 from django.urls import reverse
